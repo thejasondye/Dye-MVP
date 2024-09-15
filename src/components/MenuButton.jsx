@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+// two icons are currently supported (menu closed/menu open)
 export default function MenuButton ({
   icons, handleOpenMenu, handleCloseMenu, id, className, isOpen
 }) {
-  // for a future expansion of changing icons
   let icon = icons[0];
   let clickHandler = handleOpenMenu;
 
@@ -14,7 +14,6 @@ export default function MenuButton ({
   }
 
   return (
-    // TODO: center this button
     <button
       onClick={clickHandler}
       id={id}

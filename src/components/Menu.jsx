@@ -23,7 +23,7 @@ export default function Menu ({
     >
       {items.map((item) => (
         <div
-          className="nav-menu-item"
+          className="nav-menu-item" // not modular because of this
           key={item.name}
           onClick={onClose}
         >
@@ -35,3 +35,13 @@ export default function Menu ({
     </div>
   );
 };
+
+Menu.propTypes = {
+  id: PropTypes.string,
+  anchorEl: PropTypes.object,
+  anchorOrigin: PropTypes.object,
+  tansformOrigin: PropTypes.object,
+  isOpen: PropTypes.bool,
+  onClose: PropTypes.func,
+  items: PropTypes.arrayOf(PropTypes.object)
+}

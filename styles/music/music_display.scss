@@ -1,3 +1,4 @@
+@use '../base/mixins/paper';
 /*
   // MUSIC DISPLAY
 */
@@ -17,6 +18,7 @@
 }
 
 .music-list-item {
+  @include paper.card(1);
   width:250px;
   padding-bottom: 8px;
   cursor: pointer;

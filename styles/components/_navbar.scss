@@ -1,12 +1,18 @@
+@use 'sass:color';
+@use '../base/mixins/paper';
+// why won't the import work? would love to not have to define the mixin here ...
+
 #navbar {
+  @include paper.card(2, color.scale(#073E55, $lightness: -40%));
   height: auto;
+  margin: 6px;
   border-radius: 8px;
   position: static;
   padding: 15px 25px;
   background-color: var(--bg-secondary);
   color: var(--text-warning);
   grid: [start] "first second third" [end]
-        / 1fr 1fr 1fr;
+        / 1fr 7fr 1fr;
   @media (min-width: 600px) {
     grid: [start] "first second third" [end]
           / 6fr 2fr 1fr;
@@ -16,30 +22,30 @@
 #navbar-title {
   grid-area: second;
   align-content: end;
-  div {
-    display: grid;
-    font-size: 36px;
-  }
+  justify-content: center;
+  display: grid;
+  font-size: 36px;
 
   @media (min-width: 600px) {
+    justify-content: start;
     grid-area: first;
   }
 }
 
-#nav-menu-cntnr {
-  grid-area: first;
-  justify-content: start;
+#navigation {
+  align-content: center;
 }
 
-#nav-menu {
+#mobile-nav-menu {
+  @include paper.card(3, color.scale(#306678, $lightness: -40%));
   position: absolute;
   height: auto;
   width: auto;
-  background-color: var(--text-primary);
+  background-color: lighten(#306678, 10%);
   padding: 10px 5px;
   z-index: 200;
 
-  div {
+  div a {
     color: var(--text-warning);
     text-decoration: none;
     font-size: 20px;
@@ -47,43 +53,54 @@
   }
 }
 
-#nav-menu-btn {
+#mobile-nav-menu-btn {
   font-size: 20px;
   color: inherit;
   background-color: inherit;
   border: none;
 }
 
-#navbar-links{
+#desktop-nav {
   grid-area: second;
   grid-template-columns: repeat(3, 1fr);
   justify-items: end;
   align-items: center;
 }
 
-.navbar-link {
+.desktop-nav-link a {
   padding: 0 2px;
+  text-decoration: none;
+  color: var(--text-warning);
 }
 
+
 #user-avatar {
+  border-radius: 50%;
+  overflow: hidden;
   height: 30px;
   width: 30px;
 }
 
-.user-menu-icon {
+#placeholder-photo {
+  background-color: lighten(#306678, 20%);
+  color: var(--text-primary);
+}
+
+#user-settings {
   justify-items: end;
   align-items: center;
 }
 
 #user-menu {
+  @include paper.card(2, color.scale(#073E55, $lightness: -40%));
   position: absolute;
   height: auto;
   width: auto;
-  background-color: var(--text-primary);
+  background-color: lighten(#306678, 10%);
   padding: 10px 5px;
   z-index: 201;
 
-  div {
+  div a {
     color: var(--text-warning);
     text-decoration: none;
     font-size: 20px;

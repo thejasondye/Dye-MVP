@@ -1,8 +1,9 @@
-@use 'carousel';
-@use 'utilities';
-@use 'custom_properties';
-@use 'elements';
-@use 'navbar';
-@use 'animations';
+@use 'base';
 
-@use 'music/music_display';
+@use 'components';
+
+@use 'utils';
+
+@use 'pages';
+
+@use 'music';

@@ -1,0 +1,23 @@
+/*
+  // MUI PAPER CLONES
+*/
+
+@mixin card($height: 1, $background: #fff, $color: #000) {
+  @if $height == 1 {
+    box-shadow: 0px 1.5px 4px -1.5px $color;
+  }
+  @if $height == 2 {
+    box-shadow: 0px 2px 8px -2px $color;
+  }
+  @if $height == 3 {
+    box-shadow: 0px 2.5px 12px -3.5px $color;
+  }
+  @if $height == 4 {
+    box-shadow: 0px 2.5px 18px -3.5px $color;
+  }
+    background-color: $background;
+    border: 2px;
+    border-radius: 5px;
+}
+
+

@@ -1,115 +1,3 @@
-.carousel-cntnr {
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.carousel-content {
-  grid-template-columns: 100% 100% 100%;
-  width: 102%;
-  height: 100%;
-  white-space: nowrap;
-  transition: transform 0.3s;
-}
-.carousel-content img {
-  display: grid;
-}
-
-.carousel-image {
-  width: 100%;
-  height: 100%;
-}
-
-.container {
-  margin: 10px;
-}
-
-.item {
-  margin: 10px;
-}
-
-.box {
-  padding: 10px;
-}
-
-.button-pill {
-
-}
-
-.bold {
-  font-weight: 600;
-}
-
-.light {
-  font-weight: 200;
-}
-
-.center {
-  align-items: center;
-  justify-content: center;
-}
-
-.left {
-  justify-content: left;
-}
-
-.top {
-  justify-content: start;
-}
-
-/*
-  // MUI PAPER CLONES
-*/
-.card1 {
-  box-shadow: 0px 1.5px 4px -1.5px #000;
-  background-color: #fff;
-  border: 2px;
-  border-radius: 5px;
-}
-
-.card2 {
-  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.8666666667);
-  background-color: #fff;
-  border: 2px;
-  border-radius: 5px;
-}
-
-.card3 {
-  box-shadow: 0px 2.5px 12px -3.5px rgba(0, 0, 0, 0.8666666667);
-  background-color: #fff;
-  border: 2px;
-  border-radius: 5px;
-}
-
-.card4 {
-  box-shadow: 0px 2.5px 18px -3.5px rgba(0, 0, 0, 0.8666666667);
-  background-color: #fff;
-  border: 2px;
-  border-radius: 5px;
-}
-
-/* @media (max-width: 421px) {
-  #navbar-title {
-    margin: auto;
-  }
-} */
-/*
-Extra small devices (phones, 600px and down)
-@media only screen and (max-width: 600px) {}
-*/
-/*
- Small devices (portrait tablets and large phones, 600px and up)
-@media only screen and (min-width: 600px) {}
-*/
-/* Medium devices (landscape tablets, 768px and up)
-@media only screen and (min-width: 768px) {}
-*/
-/* Large devices (laptops/desktops, 992px and up)
-@media only screen and (min-width: 992px) {}
-*/
-/*
-Extra large devices (large laptops and desktops, 1200px and up)
-@media only screen and (min-width: 1200px) {}
-*/
 body {
   --bg-primary: #073E55;
   --bg-secondary: #306678;
@@ -146,14 +34,116 @@ div {
   display: grid;
 }
 
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*
+  // MUI PAPER CLONES
+*/
+.carousel-cntnr {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-content {
+  grid-template-columns: 100% 100% 100%;
+  width: 102%;
+  height: 100%;
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+.carousel-content img {
+  display: grid;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+}
+
 #navbar {
+  box-shadow: 0px 2px 8px -2px #000;
+  background-color: #042533;
+  border: 2px;
+  border-radius: 5px;
   height: auto;
+  margin: 6px;
   border-radius: 8px;
   position: static;
   padding: 15px 25px;
   background-color: var(--bg-secondary);
   color: var(--text-warning);
-  grid: [start] "first second third" [end]/1fr 1fr 1fr;
+  grid: [start] "first second third" [end]/1fr 7fr 1fr;
 }
 @media (min-width: 600px) {
   #navbar {
@@ -164,79 +154,127 @@ div {
 #navbar-title {
   grid-area: second;
   align-content: end;
-}
-#navbar-title div {
+  justify-content: center;
   display: grid;
   font-size: 36px;
 }
 @media (min-width: 600px) {
   #navbar-title {
+    justify-content: start;
     grid-area: first;
-    justify-content: left;
   }
 }
 
-#nav-menu-cntnr {
-  grid-area: first;
-  justify-content: start;
+#navigation {
+  align-content: center;
 }
 
-#nav-menu {
+#mobile-nav-menu {
+  box-shadow: 0px 2.5px 12px -3.5px #000;
+  background-color: #1d3d48;
+  border: 2px;
+  border-radius: 5px;
   position: absolute;
   height: auto;
   width: auto;
-  background-color: var(--text-primary);
+  background-color: #3f859c;
   padding: 10px 5px;
   z-index: 200;
 }
-#nav-menu div {
+#mobile-nav-menu div a {
   color: var(--text-warning);
   text-decoration: none;
   font-size: 20px;
   font-weight: 300;
 }
 
-#nav-menu-btn {
+#mobile-nav-menu-btn {
   font-size: 20px;
   color: inherit;
   background-color: inherit;
   border: none;
 }
 
-#navbar-links {
+#desktop-nav {
   grid-area: second;
   grid-template-columns: repeat(3, 1fr);
   justify-items: end;
   align-items: center;
 }
 
-.navbar-link {
+.desktop-nav-link a {
   padding: 0 2px;
+  text-decoration: none;
+  color: var(--text-warning);
 }
 
 #user-avatar {
+  border-radius: 50%;
+  overflow: hidden;
   height: 30px;
   width: 30px;
 }
 
-.user-menu-icon {
+#placeholder-photo {
+  background-color: #54a1ba;
+  color: var(--text-primary);
+}
+
+#user-settings {
   justify-items: end;
   align-items: center;
 }
 
 #user-menu {
+  box-shadow: 0px 2px 8px -2px #000;
+  background-color: #042533;
+  border: 2px;
+  border-radius: 5px;
   position: absolute;
   height: auto;
   width: auto;
-  background-color: var(--text-primary);
+  background-color: #3f859c;
   padding: 10px 5px;
   z-index: 201;
 }
-#user-menu div {
+#user-menu div a {
   color: var(--text-warning);
   text-decoration: none;
   font-size: 20px;
   font-weight: 300;
+}
+
+.container {
+  margin: 10px;
+}
+
+.item {
+  margin: 10px;
+}
+
+.box {
+  padding: 10px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.light {
+  font-weight: 200;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  justify-content: left;
+}
+
+.top {
+  justify-content: start;
 }
 
 /* slide-in, fade-in */
@@ -304,18 +342,17 @@ div {
   animation-delay: 1.3s;
 }
 
+#main {
+  height: "100vh";
+  padding: "0px 10px";
+}
+
 /*
   // MUSIC DISPLAY
 */
 .music-cntnr {
-  display: grid;
   padding: 20px 20px;
-  overflow:scroll;
-}
-@media(min-width: 600px) {
-  .music-cntnr {
-    grid: "first second" / 1fr 3fr;
-  }
+  height: 90vh;
 }
 
 #music-list-hdr-txt {
@@ -323,22 +360,18 @@ div {
 }
 
 #music-list {
+  height: 70vh;
   overflow: scroll;
-}
-@media(min-width: 600px) {
-  #music-list {
-    height: 645px;
-  }
 }
 
 .music-list-item {
+  box-shadow: 0px 1.5px 4px -1.5px #000;
+  background-color: #fff;
+  border: 2px;
+  border-radius: 5px;
   width: 250px;
   padding-bottom: 8px;
   cursor: pointer;
-}
-
-.music-list-card {
-  background-color: #fff;
 }
 
 .music-list-title {
@@ -354,27 +387,24 @@ div {
 
 .music-media {
   padding: 7px 0 0 15px;
+  width: 75%;
   height: 100%;
-  grid-area: second;
 }
 
 .music-disp-cntnr {
-  overflow-y: scroll;
-  max-height: 70%;
+  overflow: scroll;
+  height: 70%;
 }
 
 .music-display {
-
+  padding: 20px;
 }
 
 .no-music-cntnr {
-  grid-area: second;
   background-color: #ede9f7;
   border-radius: 5px;
   padding: 5px 16px;
-  width: 75%;
-  align-content: center;
-  justify-content: center;
+  width: 50%;
 }
 
 .music-media-blank {
